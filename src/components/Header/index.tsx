@@ -1,5 +1,6 @@
 import { ModeToggle } from "../mode-toggle";
 import { profile } from "@/resources/profile";
+import { Telephone, Envelope } from "@mynaui/icons-react";
 
 export function Header() {
   return (
@@ -15,11 +16,13 @@ export function Header() {
           <p className="font-sans font-medium text-sm pl-15 pt-2">
             {profile.subtile}
           </p>
-          <p className="font-sans font-medium text-sm pl-15 pt-2">
+          <p className="font-sans font-medium text-sm pl-15 pt-2 flex flex-row items-center gap-1">
+            <Telephone size={14} />
             <a href={profile.whatsapp} target="_blank">
               {profile.phone}
             </a>
             <span> | </span>
+            <Envelope size={14} />
             <a href={profile.mailto}>{profile.mail}</a>
           </p>
         </div>
